@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 20%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+</head>
+
+<body style="background-color:rgb(190, 230, 235);">
+  
+  <center>
+  <h1 style="color: rgb(153, 70, 230);">BOOKS YOU MUST READ AT LEAST ONCE<h1>
+  <hr/>
+  </center>
+
+
+
+  <div class="row">
+      {% for results in gallery %}
+      <div class="column">
+        <center>
+        <h5 style="color: lightcoral;">{{results.time}}<h5>
+        <img src="{{results.image.url}}" height="200" width="140" alt="{{results.title}}" />
+        </center>
+      </div>  
+      {% endfor %}  
+      
+  </div>
+
+</body>
+</html>

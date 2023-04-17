@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+    <title>Image Gallery</title>
+</head>
+<body>
+    <center>
+        <h1>Books You Have To Read At Least Once in Your Life</h1>
+        <hr/>
+    </center>
+        <div class="container">
+            <div class="row"> 
+        {% for results in gallery %}
+        <div class="col-3">
+        <hr/>
+        <h3 style="color: lightcoral;">{{results.title}}<h3>
+        <b>{{results.desc}}</b></br>
+        </br>
+        <img src="{{results.image.url}}" height="200" width="140" alt="{{results.title}}" title="{{results.title}}"/>
+        <hr/> 
+    </div>  
+
+        {% endfor %}
+           
+        
+    </div> 
+</div>    
+</body>
+</html>
