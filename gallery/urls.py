@@ -24,7 +24,7 @@ urlpatterns = [
     path("", views.home_page, name="home"),
     path("admin/", admin.site.urls),
     path("gallery", views.disp, name="gallery"),
-    
+    path("Users/", include("Users.urls")),
 ]
 
 urlpatterns+=static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT) 
