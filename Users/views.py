@@ -21,7 +21,7 @@ def user_register(request):
             if user is not None:
                 login(request, user)
                 messages.success(request, 'Registration successful. You are now logged in.')
-                return redirect('gallery')
+                return redirect('home')
         else:
             # Passwords don't match, show error message
             messages.error(request, 'Passwords do not match.')
